@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Ferozas personliga portfolio inom systemutveckling och webbutveckling.">
+
+    <title>Feroza | Systemutvecklare .NET</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<a href="#hem" class="skip-link">Hoppa till innehåll</a>
+
+    <!-- HEADER OCH NAVIGERING -->
+   
+<header>
+    <nav aria-label="Huvudmeny">
+
+        <a href="#hem" class="logo">
+            Feroza<span>.</span>
+        </a>
+
+        <!-- Knapp för mobilmenyn -->
+        <button
+            id="menu-toggle"
+            type="button"
+            aria-label="Öppna menyn"
+            aria-expanded="false"
+            aria-controls="nav-links">
+            ☰
+        </button>
+
+        <!-- Navigeringslänkar -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hem">Hem</a></li>
+            <li><a href="#om-mig">Om mig</a></li>
+            <li><a href="#kompetenser">Kompetenser</a></li>
+            <li><a href="#projekt">Projekt</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+
+        <!-- Knapp för mörkt/ljust tema -->
+        <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Växla mellan mörkt och ljust tema">
+            ☀️
+        </button>
+
+    </nav>
+</header>
+
+
+    <main>
+
+        <!-- STARTSIDA -->
+        <section id="hem" class="hero">
+
+            <div class="hero-content">
+
+                <p class="intro">Hej och välkommen!</p>
+
+                <h1>Jag heter Feroza Darwish</h1>
+
+                <h2>Systemutvecklare .NET under utbildning</h2>
+
+                <p>
+                    Jag studerar systemutveckling och brinner
+                    för programmering, teknik och att skapa
+                    användarvänliga digitala lösningar.
+
+                    Här kan du läsa mer om mig, mina
+                    kunskaper och projekt.
+                </p>
+
+                <a href="#projekt" class="btn">
+                    Utforska mina projekt
+                </a>
+
+            </div>
+
+        </section>
+
+
+        
+<!-- OM MIG -->
+<section id="om-mig">
+
+    <h2>Om mig</h2>
+
+    <p>
+        Jag heter Feroza Darwish och studerar till
+        systemutvecklare .NET samtidigt som jag
+        arbetar som bemanningsplanerare.
+    </p>
+
+    <p>
+        I min nuvarande roll som bemanningsplanerare
+        arbetar jag med planering, administration
+        och problemlösning. Arbetet har utvecklat
+        min organisationsförmåga, mitt ansvarstagande
+        och min förmåga att samarbeta med andra.
+    </p>
+
+    <p>
+        Mitt stora intresse för teknik och programmering
+        har inspirerat mig att vidareutbilda mig inom IT.
+        Jag vill kombinera min tidigare arbetslivserfarenhet
+        med nya tekniska kunskaper.
+    </p>
+
+    <p>
+        Under min utbildning arbetar jag med bland annat
+        C#, .NET, HTML, CSS, JavaScript och React.
+        Jag tycker om att lära mig nya saker,
+        lösa problem och utvecklas genom praktiska projekt.
+    </p>
+
+</section>
+
+
+
+        <!-- KOMPETENSER -->
+        <section id="kompetenser">
+
+            <h2>Mina kompetenser</h2>
+
+            <p>
+                Här är några av de tekniker och verktyg
+                jag arbetar med under min utbildning.
+            </p>
+
+            <div class="skills-container">
+
+                <div class="skill-card">HTML5</div>
+
+                <div class="skill-card">CSS3</div>
+
+                <div class="skill-card">JavaScript</div>
+
+                <div class="skill-card">React</div>
+
+                <div class="skill-card">C#</div>
+
+                <div class="skill-card">.NET</div>
+
+                <div class="skill-card">Avalonia UI</div>
+
+                <div class="skill-card">Git & GitHub</div>
+
+                <div class="skill-card">Visual Studio Code</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MINA PROJEKT -->
+       
+<section id="projekt">
+    <h2>Mina projekt</h2>
+    <p>Här presenterar jag några av de projekt jag har arbetat med under min utbildning.</p>
+
+    <!-- Knappar för projektfiltrering -->
+    <div class="project-filters" role="group" aria-label="Filtrera projekt">
+        <button type="button" class="filter-btn" data-filter="alla" aria-pressed="true">
+            Alla projekt
+        </button>
+        <button type="button" class="filter-btn" data-filter="csharp" aria-pressed="false">
+            C# / .NET
+        </button>
+        <button type="button" class="filter-btn" data-filter="webb" aria-pressed="false">
+            Webbutveckling
+        </button>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Projekt 1 -->
+        <article class="project-card" data-category="csharp">
+            <h3>Bibliotekssystem</h3>
+            <p>
+                Ett bibliotekssystem utvecklat med C#, .NET och Avalonia UI.
+                Projektet handlar om att hantera böcker och utlåning
+                genom ett grafiskt användargränssnitt.
+            </p>
+            <p><strong>Tekniker:</strong> C#, .NET, Avalonia UI</p>
+        </article>
+
+        <!-- Projekt 2 -->
+        <article class="project-card" data-category="csharp">
+            <h3>TicTacToeGUI – Tre i rad</h3>
+            <p>
+                Ett grafiskt spel där två spelare turas om att placera
+                X och O. Spelet kontrollerar vinnare, oavgjort
+                och har möjlighet att startas om.
+            </p>
+            <p><strong>Tekniker:</strong> C#, .NET, Avalonia UI</p>
+        </article>
+
+        <!-- Projekt 3 -->
+        <article class="project-card" data-category="webb">
+            <h3>TechUp Inventory Portal</h3>
+            <p>
+                Ett grupparbete där vi utvecklade ett system för
+                lagerhantering. Jag ansvarade för inloggningsfunktionen
+                med mock-data och kopplade den till Dashboard
+                med hjälp av React Router.
+            </p>
+            <p><strong>Tekniker:</strong> React, JavaScript, CSS</p>
+        </article>
+
+        <!-- Projekt 4 -->
+        <article class="project-card" data-category="webb">
+            <h3>Pokémon Battle Arena</h3>
+            <p>
+                Ett grupparbete inom webbutveckling med Pokémon-tema.
+                Jag arbetade med webbplatsens design, CSS och layout.
+            </p>
+            <p><strong>Tekniker:</strong> HTML, CSS, JavaScript</p>
+        </article>
+
+        <!-- Projekt 5 -->
+        <article class="project-card" data-category="webb">
+            <h3>Min professionella portfolio</h3>
+            <p>
+                En personlig webbplats där jag presenterar mina
+                kunskaper, projekt och erfarenheter.
+                Webbplatsen utvecklas med responsiv design
+                och interaktiva funktioner i JavaScript.
+            </p>
+            <p><strong>Tekniker:</strong> HTML5, CSS3, JavaScript</p>
+        </article>
+
+    </div>
+</section>
+
+
+        <!-- KONTAKT -->
+        <section id="kontakt">
+
+            <h2>Kontakta mig</h2>
+            <p>
+                 Detta är ett demonstrationsformulär.
+                 Du kan testa att fylla i uppgifterna,
+                 men inget meddelande skickas.
+            </p>
+            <p>
+                Vill du komma i kontakt med mig?
+                Skicka gärna ett meddelande!
+            </p>
+
+            <form id="contact-form">
+
+                <label for="name">
+                    Namn
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">
+                    E-post
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="message">
+                    Meddelande
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    required>
+                </textarea>
+
+                <button type="submit" class="btn">
+                    Skicka meddelande
+                </button>
+
+                <p
+                    id="form-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Feroza |
+            Min professionella portfolio
+        </p>
+
+    </footer>
+
+</body>
+</html>

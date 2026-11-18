@@ -1,0 +1,427 @@
+
+/* FÄRGER OCH GRUNDINSTÄLLNINGAR */
+
+:root {
+    --background: #17151d;
+    --card: #292430;
+    --pink: #f5b8d0;
+    --text: #f7f4f7;
+    --muted: #c9c0cc;
+    --border: #514554;
+    --button-text: #17151d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* NAVIGERING */
+
+header {
+    background-color: var(--background);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span,
+.intro {
+    color: var(--pink);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+/* Knapp för mörkt och ljust tema */
+
+#theme-toggle {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Hamburgermeny - dold på dator */
+
+#menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--pink);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 26px;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+/* SEKTIONER */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 24px;
+    scroll-margin-top: 90px;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* STARTSIDA / HERO */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    color: var(--pink);
+    font-size: clamp(22px, 3vw, 32px);
+    margin-top: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+}
+
+/* KNAPPAR */
+
+.btn {
+    display: inline-block;
+    background-color: var(--pink);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    padding: 13px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* KOMPETENSER OCH PROJEKT */
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.skill-card {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    color: var(--pink);
+}
+
+/* PROJEKTFILTRERING */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border: 1px solid var(--pink);
+    border-radius: 25px;
+    background-color: var(--card);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn[aria-pressed="true"] {
+    background-color: var(--pink);
+    color: var(--button-text);
+}
+
+.project-card[hidden] {
+    display: none;
+}
+
+/* KONTAKTFORMULÄR */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 550px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#form-message {
+    margin-top: 15px;
+    color: var(--pink);
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* LJUST TEMA */
+
+body.light-theme {
+    --background: #fff5fa;
+    --card: #f9e2ec;
+    --pink: #852653;
+    --text: #29202a;
+    --muted: #625361;
+    --border: #a88b9b;
+    --button-text: #ffffff;
+}
+
+/* TILLGÄNGLIGHET */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ff9ed2;
+    outline-offset: 4px;
+}
+
+body.light-theme a:focus-visible,
+body.light-theme button:focus-visible,
+body.light-theme input:focus-visible,
+body.light-theme textarea:focus-visible {
+    outline-color: #852653;
+}
+
+/* Respektera användarens rörelseinställningar */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* MOBIL OCH SURFPLATTA */
+
+@media (max-width: 768px) {
+
+    /* Navigering */
+
+    nav {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    #menu-toggle {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #theme-toggle {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    /* Mobilmenyn */
+
+    .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    /* Sektioner */
+
+    section {
+        padding: 50px 20px;
+        scroll-margin-top: 85px;
+    }
+
+    /* Startsida */
+
+    .hero {
+        min-height: 65vh;
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    /* Kompetenser och projekt */
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        justify-content: center;
+    }
+
+    /* Kontaktformulär */
+
+    #contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SMÅ MOBILSKÄRMAR */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .filter-btn {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 20px;
+    }
+}
+
+/* Hoppa till innehåll - tillgänglighet */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 15px;
+    z-index: 100;
+    background-color: var(--pink);
+    color: var(--button-text);
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 15px;
+}
