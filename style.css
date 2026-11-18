@@ -577,3 +577,37 @@ body.light-theme textarea:focus-visible {
         height: 200px;
     }
 }
+
+/* Förbättra utrymmet på startsidan */
+
+.hero {
+    min-height: 60vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    line-height: 1.2;
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    margin: 0;
+}
+
+/* Anpassning för mobil */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        gap: 25px;
+    }
+}
